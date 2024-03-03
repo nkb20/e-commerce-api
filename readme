@@ -1,0 +1,57 @@
+## E-Commerce APIs with User Authentication
+Overview
+This project provides a set of APIs for managing an e-commerce platform, including user authentication features. It allows users to register, log in, and perform various operations related to products and orders.
+
+## Technologies Used
+Node.js
+Express.js
+MongoDB (or your preferred database)
+JWT (JSON Web Tokens) for authentication
+
+## Installation
+Clone the repository: git clone https://github.com/nkb20/e-commerce-api.git
+Install dependencies: npm install
+
+Set up your MongoDB database and configure the connection in the .env file.
+Start the server: npm run start
+
+Available Endpoints
+
+## Products
+Add Product: POST /api/v1/products/add
+Update Product: PUT /api/v1/products/{productId}
+Delete Product: DELETE /api/v1/products/{productId}
+Get All Products: GET /api/v1/all-product
+Get Product by ID: GET /api/v1/product/{productId}
+Get Products with Pagination: GET /api/v1/products?pageNumber={pageNumber}&pageSize={pageSize}&sortBy={sortBy}
+
+## User Management
+User Registration: POST /api/v1/user/registration
+User Login: POST /api/v1/user/login
+Change Password: POST /api/v1/user/change-password
+Generate Forgot Password URL: POST /api/v1/user/generate-forgot-url
+Token Validation: GET /api/v1/user/token-validation
+
+## Environment Variables
+Make sure to set up the following environment variables in a .env file:
+PORT: 8001
+MONGO_URI: mongodb://localhost:27017
+JWT_SECRET: Kjsdkf@#WW}{Okjsfn66565+++===@
+
+## Error Handling
+The application handles errors gracefully and provides appropriate error messages for different scenarios. Errors related to validation, duplicate entries, and other general errors are properly handled and returned to the client.
+
+## Logging
+The application utilizes the Winston library for logging. Logs are generated for various events and actions within the application, helping in debugging and monitoring.
+
+## Postman Exports
+You can find the Postman exports file inside the postman folder. This file contains a collection of API requests that you can import into Postman to test the endpoints described above.
+
+## Password Reset via Email
+This project includes a feature to send a password reset link to the user's email. When a user forgets their password, they can request a reset link via the POST /api/v1/user/generate-forgot-url endpoint. This link is sent to the user's email, allowing them to securely reset their password.
+
+Feel free to adjust the content according to your specific project needs and guidelines. Let me know if you need further assistance!
+
+
+
+

@@ -1,0 +1,406 @@
+{
+	"info": {
+		"_postman_id": "82da0e8c-67dc-4d20-98c6-51027c86d48c",
+		"name": "e-commerce-apis",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28033366"
+	},
+	"item": [
+		{
+			"name": "products",
+			"item": [
+				{
+					"name": "add-products",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJpa2x5bGUtYXV0aC1zZXJ2ZXIiLCJzdWIiOiJzYW1ld2VyIiwiZXhwIjoxNzA5NDY1OTk5LCJuYmYiOjE3MDk0NjIzOTksImlhdCI6MTcwOTQ2MjM5OSwianRpIjoiOTY4NjE2MGItNTlmMC00MDRiLTk1OTItNGM4MjVlODI4YzExIiwicm9sZSI6InVzZXIifQ.P4ao9x9xScAdcnD-5ka5HPb8a93JVU_qKAjHe38hRMc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[{\r\n  \"name\": \"Samsung\",\r\n  \"description\": \"Powerful laptop with high performance\",\r\n  \"price\": 1200,\r\n  \"category\": \"Electronics\",\r\n  \"brand\": \"BrandX\",\r\n  \"image\": \"https://example.com/laptop.jpg\",\r\n  \"stock\": 50,\r\n  \"ratings\": 4.5,\r\n  \"numReviews\": 20\r\n}]\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8001/api/v1/product",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"api",
+								"v1",
+								"product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update-product",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJpa2x5bGUtYXV0aC1zZXJ2ZXIiLCJzdWIiOiJzYW1ld2VyIiwiZXhwIjoxNzA5NDY1OTk5LCJuYmYiOjE3MDk0NjIzOTksImlhdCI6MTcwOTQ2MjM5OSwianRpIjoiOTY4NjE2MGItNTlmMC00MDRiLTk1OTItNGM4MjVlODI4YzExIiwicm9sZSI6InVzZXIifQ.P4ao9x9xScAdcnD-5ka5HPb8a93JVU_qKAjHe38hRMc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Nokia\"\r\n \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8001/api/v1/product/65e45c879e5b4d34a209da6e",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"api",
+								"v1",
+								"product",
+								"65e45c879e5b4d34a209da6e"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete-product",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJpa2x5bGUtYXV0aC1zZXJ2ZXIiLCJzdWIiOiJzYW1ld2VyIiwiZXhwIjoxNzA5NDY1OTk5LCJuYmYiOjE3MDk0NjIzOTksImlhdCI6MTcwOTQ2MjM5OSwianRpIjoiOTY4NjE2MGItNTlmMC00MDRiLTk1OTItNGM4MjVlODI4YzExIiwicm9sZSI6InVzZXIifQ.P4ao9x9xScAdcnD-5ka5HPb8a93JVU_qKAjHe38hRMc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8001/api/v1/product/65e45c879e5b4d34a209da6e",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"api",
+								"v1",
+								"product",
+								"65e45c879e5b4d34a209da6e"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-all-product",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "yJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJpa2x5bGUtYXV0aC1zZXJ2ZXIiLCJzdWIiOiJhZnRhYWEiLCJleHAiOjE3MDkzMzE4NDIsIm5iZiI6MTcwOTMyODI0MiwiaWF0IjoxNzA5MzI4MjQyLCJqdGkiOiIxYjk5NjJmYy1iZTY2LTRiOWItODMyYi1lNDY3MDYyN2I0ZmYiLCJyb2xlIjoidXNlciJ9.IT1MMWLcjIblN3mBiQWYMvuxHxb3Kj7KeVtIsVgBqFA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8001/api/v1/product?pageNumber=1&pageSize=5&sortBy=createdAt",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"api",
+								"v1",
+								"product"
+							],
+							"query": [
+								{
+									"key": "pageNumber",
+									"value": "1"
+								},
+								{
+									"key": "pageSize",
+									"value": "5"
+								},
+								{
+									"key": "sortBy",
+									"value": "createdAt"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-product-by-id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8001/api/v1/product/65e42050b4264efedd282b8f",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"api",
+								"v1",
+								"product",
+								"65e42050b4264efedd282b8f"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "registration",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userName\":\"name1\",\r\n    \"firstName\":\"name\",\r\n    \"lastName\": \"abc\",\r\n    \"mobileNumber\":\"8456214597\",\r\n    \"emailId\": \"test@gmail.com\",\r\n    \"city\": \"Mumbai\",\r\n    \"state\":\"Maharashtra\",\r\n    \"pinCode\": \"400072\",\r\n    \"password\":\"123\",\r\n    \"role\":\"admin\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8001/api/v1/user/registration",
+					"host": [
+						"localhost"
+					],
+					"port": "8001",
+					"path": [
+						"api",
+						"v1",
+						"user",
+						"registration"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userName\": \"name1\",\r\n    \"password\": \"123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8001/api/v1/user/login",
+					"host": [
+						"localhost"
+					],
+					"port": "8001",
+					"path": [
+						"api",
+						"v1",
+						"user",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "change-password",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJpa2x5bGUtYXV0aC1zZXJ2ZXIiLCJzdWIiOiJzYW1ld2VyIiwiZXhwIjoxNzA5NDY1OTk5LCJuYmYiOjE3MDk0NjIzOTksImlhdCI6MTcwOTQ2MjM5OSwianRpIjoiOTY4NjE2MGItNTlmMC00MDRiLTk1OTItNGM4MjVlODI4YzExIiwicm9sZSI6InVzZXIifQ.P4ao9x9xScAdcnD-5ka5HPb8a93JVU_qKAjHe38hRMc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"newPassword\":\"12345\",\r\n    \"confirmPassword\":\"12345\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8001/api/v1/user/change-password",
+					"host": [
+						"localhost"
+					],
+					"port": "8001",
+					"path": [
+						"api",
+						"v1",
+						"user",
+						"change-password"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "generate-forgot-url",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\r\n    \"userName\":\"name1\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8001/api/v1/user/generate-forgot-url",
+					"host": [
+						"localhost"
+					],
+					"port": "8001",
+					"path": [
+						"api",
+						"v1",
+						"user",
+						"generate-forgot-url"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "token-validation",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJpa2x5bGUtYXV0aC1zZXJ2ZXIiLCJzdWIiOiJzYW1ld2VyIiwiZXhwIjoxNzA5NDY1OTk5LCJuYmYiOjE3MDk0NjIzOTksImlhdCI6MTcwOTQ2MjM5OSwianRpIjoiOTY4NjE2MGItNTlmMC00MDRiLTk1OTItNGM4MjVlODI4YzExIiwicm9sZSI6InVzZXIifQ.P4ao9x9xScAdcnD-5ka5HPb8a93JVU_qKAjHe38hRMc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8001/api/v1/user/token-validation",
+					"host": [
+						"localhost"
+					],
+					"port": "8001",
+					"path": [
+						"api",
+						"v1",
+						"user",
+						"token-validation"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
